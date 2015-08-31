@@ -1,12 +1,26 @@
 #include <stdio.h>
-#include <stdlib.h>
 
+#include "CuTest.h"
+#include "trigonometric.h"
 
+CuSuite* CuTrigonometricSuite(void);
 
-int main()
+void RunAllTests(void)
 {
-    test_fixp_sin();
+	CuString *output = CuStringNew();
+	CuSuite* suite = CuSuiteNew();
 
-    printf("Hello world!\n");
-    return 0;
+    // add here the tests
+	CuSuiteAddSuite(suite, CuTrigonometricSuite());
+
+	CuSuiteRun(suite);
+	CuSuiteSummary(suite, output);
+	CuSuiteDetails(suite, output);
+	printf("%s\n", output->buffer);
+}
+
+int main(void)
+{
+	RunAllTests();
+	return 0;
 }

@@ -19,6 +19,10 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="CuTest.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="CuTest.h" />
 		<Unit filename="arithmetic.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -26,6 +30,9 @@
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="sci_calc_all_tests.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="test_trigonometric.c">

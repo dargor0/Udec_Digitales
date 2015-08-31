@@ -1,0 +1,36 @@
+# depslib dependency file v1.0
+1441035748 source:/home/oscar/Unicundi/Periodo_2015_II/programming/Udec_Digitales.git/Digitales_II/sci_calc/sci_calc_all_tests.c
+	<stdio.h>
+	"CuTest.h"
+	"trigonometric.h"
+
+1279815068 /home/oscar/Unicundi/Periodo_2015_II/programming/Udec_Digitales.git/Digitales_II/sci_calc/CuTest.h
+	<setjmp.h>
+	<stdarg.h>
+
+1440775139 /home/oscar/Unicundi/Periodo_2015_II/programming/Udec_Digitales.git/Digitales_II/sci_calc/trigonometric.h
+	"arithmetic.h"
+
+1441035732 /home/oscar/Unicundi/Periodo_2015_II/programming/Udec_Digitales.git/Digitales_II/sci_calc/arithmetic.h
+	<stdint.h>
+
+1440774193 source:/home/oscar/Unicundi/Periodo_2015_II/programming/Udec_Digitales.git/Digitales_II/sci_calc/arithmetic.c
+	"arithmetic.h"
+
+1279815068 source:/home/oscar/Unicundi/Periodo_2015_II/programming/Udec_Digitales.git/Digitales_II/sci_calc/CuTest.c
+	<assert.h>
+	<setjmp.h>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<math.h>
+	"CuTest.h"
+
+1441035841 source:/home/oscar/Unicundi/Periodo_2015_II/programming/Udec_Digitales.git/Digitales_II/sci_calc/main.c
+	<stdio.h>
+	"CuTest.h"
+	"trigonometric.h"
+
+1440776116 source:/home/oscar/Unicundi/Periodo_2015_II/programming/Udec_Digitales.git/Digitales_II/sci_calc/trigonometric.c
+	"trigonometric.h"
+

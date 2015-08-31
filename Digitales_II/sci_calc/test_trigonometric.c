@@ -23,6 +23,7 @@ License along with this package; if not, see
 /* General headers */
 #include "trigonometric.h"
 #include <math.h>
+#include "CuTest.h"
 
 /* Project headers */
 
@@ -32,7 +33,7 @@ License along with this package; if not, see
 // value pair of the sine function
 const float test_vector_sin_inputs[] = {0.0, 0.1, 0.2};
 const float test_vector_sin_outputs[] = {0.0, 0.09, 0.19};
-const int test_vector_sin_len = 3
+const int test_vector_sin_len = 3;
 
 /* Global variables */
 
@@ -51,7 +52,7 @@ fixp_number_t conv_fixp(float x)
     return partial;
 }
 
-int test_fixp_sin()
+int test_fixp_sin(CuTest* tc)
 {
     int i, errcount;
     fixp_number_t x_in, y_out;
@@ -61,12 +62,27 @@ int test_fixp_sin()
     for(i=0; i<test_vector_sin_len; i++) {
         x_in = conv_fixp(test_vector_sin_inputs[i]);
         y_out = fixp_sin(x_in);
+        /*
         if(y_out != conv_fix(test_vector_sin_inputs[i])) {
             printf("Error: no corresponde con el valor sin(%f)=%f", test_vector_sin_inputs[i], test_vector_sin_outputs[i])
             errcount++;
         }
+        */
+        CuAssertTrue(tc, y_out != conv_fixp(test_vector_sin_inputs[i]));
     }
-    return errcount;
+    //return errcount;
+}
+
+
+CuSuite* CuTrigonometricSuite(void)
+{
+	CuSuite* suite = CuSuiteNew();
+
+	SUITE_ADD_TEST(suite, test_fixp_sin);
+	//SUITE_ADD_TEST(suite, test_fixp_cos);
+	//SUITE_ADD_TEST(suite, test_fixp_tan);
+
+	return suite;
 }
 
 /* ---- */

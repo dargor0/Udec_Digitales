@@ -41,6 +41,6 @@ typedef int32_t fixp_number_t;
 
 /* Function prototypes for this module */
 inline fixp_number_t fixp_sub(fixp_number_t x, fixp_number_t y);
-fixp_number_t fixp_mult(fixp_number_t x, fixp_number_t y)
+fixp_number_t fixp_mult(fixp_number_t x, fixp_number_t y);
 
 #endif // ARITHMETIC_H_INCLUDED
