@@ -4,7 +4,9 @@
 
 void conv_a_binario(char num_entrada[], int base_entrada, char num_salida[])
 {
+    // llamar a la funcion de division por 2
     div2()
+    // otro comentario inútil
 }
 
 binario_a_base()
