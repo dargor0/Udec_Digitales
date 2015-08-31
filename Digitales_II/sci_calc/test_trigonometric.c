@@ -44,7 +44,11 @@ const int test_vector_sin_len = 3
 
 fixp_number_t conv_fixp(float x)
 {
-
+    fixp_number_t partial;
+    // float to fixp_number_t: multiply by 2^(FIXP_FRAC_BITS) and
+    // save as integer
+    partial = (fixp_number_t) (x * ((float) (1<<FIXP_FRAC_BITS)));
+    return partial;
 }
 
 int test_fixp_sin()
