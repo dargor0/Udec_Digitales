@@ -22,7 +22,7 @@ License along with this package; if not, see
 
 /* General headers */
 #include "trigonometric.h"
-#include <math.h>
+#include <stdlib.h>
 #include "CuTest.h"
 
 /* Project headers */
@@ -52,12 +52,10 @@ fixp_number_t conv_fixp(float x)
     return partial;
 }
 
-int test_fixp_sin(CuTest* tc)
+void test_fixp_sin(CuTest* tc)
 {
-    int i, errcount;
+    int i;
     fixp_number_t x_in, y_out;
-
-    errcount = 0;
 
     for(i=0; i<test_vector_sin_len; i++) {
         x_in = conv_fixp(test_vector_sin_inputs[i]);
@@ -68,7 +66,9 @@ int test_fixp_sin(CuTest* tc)
             errcount++;
         }
         */
-        CuAssertTrue(tc, y_out != conv_fixp(test_vector_sin_inputs[i]));
+
+        //CuAssertTrue(tc, y_out != conv_fixp(test_vector_sin_inputs[i]));
+        CuAssertIntEquals(tc, conv_fixp(test_vector_sin_inputs[i]), y_out);
     }
     //return errcount;
 }

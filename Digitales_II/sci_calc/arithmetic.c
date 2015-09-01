@@ -38,9 +38,28 @@ License along with this package; if not, see
 
 /* Public functions */
 
-inline fixp_number_t fixp_sub(fixp_number_t x, fixp_number_t y)
+/**
+ * Addition over fixp numbers
+ *
+ * @param x Operand 1
+ * @param y Operand 2
+ * @return Addition result
+ */
+inline fixp_number_t fixp_add(fixp_number_t x, fixp_number_t y)
 {
     return x+y;
+}
+
+/**
+ * Substraction over fixp numbers
+ *
+ * @param x Operand 1
+ * @param y Operand 2
+ * @return Substraction result
+ */
+inline fixp_number_t fixp_sub(fixp_number_t x, fixp_number_t y)
+{
+    return x-y;
 }
 
 /**
@@ -80,5 +99,16 @@ fixp_number_t fixp_pow(fixp_number_t x, int p)
     }
     partial &= (0xffffffff);
     return (fixp_number_t) partial;
+}
+
+/**
+ * Factorial over int numbers, result in fixp numbers
+ *
+ * @param x base
+ * @return Factorial result
+ */
+fixp_number_t fixp_fact(int x)
+{
+    
 }
 /* ---- */

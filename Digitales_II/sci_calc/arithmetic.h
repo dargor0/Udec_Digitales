@@ -36,10 +36,12 @@ typedef int32_t fixp_number_t;
 #define FIXP_FRAC_BITS 16
 
 /* Macros */
-#define fixp_add(x,y) (x+y)
+// NOTE: macros replaced by inline functions
+//#define fixp_add(x,y) (x+y)
 //#define fixp_sub(x,y) (x-y)
 
 /* Function prototypes for this module */
+inline fixp_number_t fixp_add(fixp_number_t x, fixp_number_t y);
 inline fixp_number_t fixp_sub(fixp_number_t x, fixp_number_t y);
 fixp_number_t fixp_mult(fixp_number_t x, fixp_number_t y);
 

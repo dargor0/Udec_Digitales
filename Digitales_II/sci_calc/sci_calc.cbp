@@ -32,9 +32,6 @@
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="sci_calc_all_tests.c">
-			<Option compilerVar="CC" />
-		</Unit>
 		<Unit filename="test_trigonometric.c">
 			<Option compilerVar="CC" />
 		</Unit>
