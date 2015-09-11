@@ -29,14 +29,14 @@ License along with this package; if not, see
 /* Private data types */
 
 /* Private constants */
-const float fact_values[] = {
-    1.0,    // 0!
-    1.0,    // 1!
-    2.0,    // 2!
-    6.0,    // 3!
-    24.0,   // 4!
-    120.0,  // 5!
-    720.0   // 6!
+const int fact_values[] = {
+    1,    // 0!
+    1,    // 1!
+    2,    // 2!
+    6,    // 3!
+    24,   // 4!
+    120,  // 5!
+    720   // 6!
 };
 
 /* Global variables */
