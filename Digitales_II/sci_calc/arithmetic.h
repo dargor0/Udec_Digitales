@@ -44,5 +44,9 @@ typedef int32_t fixp_number_t;
 inline fixp_number_t fixp_add(fixp_number_t x, fixp_number_t y);
 inline fixp_number_t fixp_sub(fixp_number_t x, fixp_number_t y);
 fixp_number_t fixp_mult(fixp_number_t x, fixp_number_t y);
+fixp_number_t fixp_div(fixp_number_t x, fixp_number_t y);
+fixp_number_t fixp_pow(fixp_number_t x, int p);
+fixp_number_t fixp_fact(int x);
+
 
 #endif // ARITHMETIC_H_INCLUDED

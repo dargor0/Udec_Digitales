@@ -29,6 +29,15 @@ License along with this package; if not, see
 /* Private data types */
 
 /* Private constants */
+const float fact_values[] = {
+    1.0,    // 0!
+    1.0,    // 1!
+    2.0,    // 2!
+    6.0,    // 3!
+    24.0,   // 4!
+    120.0,  // 5!
+    720.0   // 6!
+};
 
 /* Global variables */
 
@@ -79,7 +88,17 @@ fixp_number_t fixp_mult(fixp_number_t x, fixp_number_t y)
     return (fixp_number_t) partial;
 }
 
-// TODO: division function
+/**
+ * Division over fixp numbers
+ *
+ * @param x Operand 1
+ * @param y Operand 2
+ * @return Division result
+ */
+fixp_number_t fixp_div(fixp_number_t x, fixp_number_t y)
+{
+    return 0;
+}
 
 /**
  * Power over fixp numbers
@@ -109,6 +128,8 @@ fixp_number_t fixp_pow(fixp_number_t x, int p)
  */
 fixp_number_t fixp_fact(int x)
 {
-    
+    // check table boundaries
+    if ((x < 0) || (x > 6)) return 0;
+    else return (fixp_number_t) (fact_values[x] * (1<<FIXP_FRAC_BITS));
 }
 /* ---- */

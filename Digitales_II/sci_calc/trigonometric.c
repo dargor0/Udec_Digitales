@@ -45,7 +45,37 @@ License along with this package; if not, see
  */
 fixp_number_t fixp_sin(fixp_number_t x)
 {
-    return 0;
+    // First version
+
+    fixp_number_t partial_add, partial_term;
+    // calculate first term
+    partial_add = x;
+    // calculate second term and sub it
+    partial_term = fixp_pow(x, 3);
+    partial_term = fixp_div(partial_term, fixp_fact(3));
+    partial_add = fixp_sub(partial_add, partial_term);
+    // calculate third term and add it
+    partial_term = fixp_pow(x, 5);
+    partial_term = fixp_div(partial_term, fixp_fact(5));
+    partial_add = fixp_add(partial_add, partial_term);
+
+    // Second version
+//    int i;
+//    const int term_limit = 5;
+//    fixp_number_t partial_add, partial_term;
+//
+//    partial_add = x;
+//    for(i = 3; i <= term_limit ; i+=2) {
+//        partial_term = fixp_pow(x, i);
+//        partial_term = fixp_div(partial_term, fixp_fact(i));
+//        partial_add = fixp_sub(partial_add, partial_term);
+//        i+=2;
+//        partial_term = fixp_pow(x, i);
+//        partial_term = fixp_div(partial_term, fixp_fact(i));
+//        partial_add = fixp_add(partial_add, partial_term);
+//    }
+
+    return partial_add;
 }
 
 /* ---- */
